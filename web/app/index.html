@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gabara A Spotify Playlist Editor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type ="text/css" href="/static/styles.css">
+</head>
+
+<body>
+  <div class="archivo-black-regular text-white w-full h-screen bg-mauve-900 flex flex-row">
+    <!--nav bar-->
+    <div class="sidebar w-110 h-full flex flex-col gap-5 p-3 border bg-mauve-800">
+      <div class="flex items-center gap-20 p-3 border bg-mauve-700">
+        <h3>user_name Library</h3> 
+        <div class="flex items-center gap-5">
+          <button onclick="toggleEdit()" class="bg-transparent text-secondary p-2 border">Edit</button>
+          <button onclick="toggleClose()" class="bg-transparent text-secondary p-2 border">Close</button>
+        </div>
+      </div>
+      <a class="text-base no-underline" href="#section-favorites">Favorites</a>
+      <a class="text-base no-underline" href="#section-playlists">Playlists</a>
+      <a class="text-base no-underline" href="#section-drafts">Drafts</a>
+      <a class="text-base no-underline" href="#section-about">About</a>
+      <button onclick="toggleSignOut()" href="pages/author.html" class="bg-transparent text-secondary p-2 mt-auto border">Sign Out</button>
+    </div>
+    <!--content-->
+    <div class="h-full w-full overflow-y-auto border">
+      <div class="w-full h-auto flex flex-col p-3 gap-3">
+        <h1 class="text-3xl">Playlists</h1>
+        <form>
+          <input type="checkbox" id="all" name="all" value="select-all">
+          <label for="all">select all</label>
+        </form>
+        <div id="section-playlists" class ="flex flex-row p-3 gap-15 border w-full"><h3>#</h3><h3>Title</h3></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
