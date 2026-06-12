@@ -39,7 +39,7 @@ func NewAuth() {
 		log.Fatal("Error loading .env file")
 	}
 	clientID := os.Getenv("SPOTIFY_CLIENT_ID")
-	clientSecret := os.Getenv("SPOTIFY_CLIENT_SECRET")
+	//clientSecret := os.Getenv("SPOTIFY_CLIENT_SECRET")
 
 	// generate random state seed, verifier and challenge 
 	state = uuid.New().String() 
@@ -48,7 +48,6 @@ func NewAuth() {
 
 	auth = spotifyauth.New(
 		spotifyauth.WithClientID(clientID),
-		spotifyauth.WithClientSecret(clientSecret),
 		spotifyauth.WithRedirectURL(redirectURI))
 	
 	// the url to OAuth2.0 that asks for permission for the required parameters
@@ -82,7 +81,7 @@ func completeAuth(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("State mismatch: %s != %s\n", st, state)
 	}
 	client := spotify.New(auth.Client(r.Context(), token))
-	fmt.Printf("token: %q", token)
+	fmt.Printf("token: %v", token)
 	fmt.Fprintf(w, "login completed")
 	ch <- client
 }
