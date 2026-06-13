@@ -5,8 +5,9 @@
     "watch": "npx @tailwindcss/cli -w -i ./static/styles.css -o ./web/app/public/styles.css"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.1",
+    "dotenv": "^17.4.2",
     "postcss": "^8.5.15",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.1"
   }
 }
