@@ -1,7 +1,5 @@
-require('dotenv').config();
-
-const clientId = process.env.SPOTIFY_CLIENT_ID;
-const redirectUri = 'http://127.0.0.1:8000/callback';
+const clientId = "105507cca7d448d7a4f7ce2108cc5f37";
+const redirectUri = 'https://bettaburger.github.io/gabara/docs/callback.html';
 const scope = 'user-read-private user-read-email';
 
 const generateRandomString = (length) => {
