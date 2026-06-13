@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/styles.css">
 </head>
-
 <body class="bg-mauve-900">
   <div class="archivo-black-regular h-screen flex flex-col justify-center pl-10 gap-6 p-7">
     <h1 class="fadeInUp-animation text-6xl font-medium text-white underline">Too Many Playlists?<br>Too Many Liked Songs?</h1>
     <h1 class="fadeInUp-animation text-9xl font-medium text-mauve-500 underline">Gabara</h1>
     <h1 class="fadeInUp-animation text-4xl font-medium text-white">Where Spotify listeners can optimize their library
-      <button class="
-      fadeInUp-animation flex justify-center text-3xl text-green-100 hover:text-green-500 transition-colors duraction-200 ease-in-200">Connect Your Spotify</button>
+      <button id="connectSpotify" class="fadeInUp-animation flex justify-center text-3xl text-green-100 hover:text-green-500 transition-colors duraction-200 ease-in-200">Connect Your Spotify</button>
     </h1>
   </div>
+  <script src="/src/authenticate/pkce.js"></script>
 </body>
 </html>
